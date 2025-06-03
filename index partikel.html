@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroCore - Your Smart Productivity Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
+  <!-- Loader -->
+  <div id="loader">Launching NeuroCore...</div>
+
+  <!-- Header -->
+  <header class="glass-header">
+    <div class="container">
+      <h1 class="logo">NeuroCore</h1>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#future">Vision</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section id="hero" class="hero-section">
+      <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="background.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <div class="container">
+        <h2>Empower Your Workflow with NeuroCore</h2>
+        <p>Intelligent tools to unlock your productivity and lead the future.</p>
+        <button class="btn-primary" id="cta-button">Launch Beta</button>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="glass-section">
+      <div class="container">
+        <h3>What is NeuroCore?</h3>
+        <p>A lightweight AI platform that helps you plan smarter, work faster, and grow exponentially — all in one dashboard.</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="glass-section">
+      <div class="container">
+        <h3>Core Features</h3>
+        <div class="feature-grid">
+          <a href="ai-planner.html" class="feature-item">
+            <h4>🧠 AI Planner</h4>
+            <img src="ai planner .gif" alt="AI Planner Demo" class="feature-gif" />
+            <p>Automatically generate smart schedules, to-dos, and focus blocks.</p>
+          </a>
+          <a href="insight-engine.html" class="feature-item">
+            <h4>📊 Insight Engine</h4>
+            <img src="ai insight.gif" alt="Insight Engine Demo" class="feature-gif" />
+            <p>Turn your daily input into meaningful insights and suggestions.</p>
+          </a>
+          <a href="smart-assistant.html" class="feature-item">
+            <h4>🤖 Smart Assistant</h4>
+            <img src="ai assistant.gif" alt="Smart Assistant Demo" class="feature-gif" />
+            <p>Your personal mini AI to help navigate tasks, notes, and goals.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="future" class="glass-section">
+      <div class="container">
+        <h3>Our Vision</h3>
+        <p>To create a human-centric AI hub that not only helps you do more, but do it better, smarter, and with less stress.</p>
+      </div>
+    </section>
+
+    <!-- Beta Form -->
+    <section class="glass-section" id="beta-form-section">
+      <div class="container">
+        <h3>Join Beta Access</h3>
+        <form id="beta-form">
+          <input type="text" placeholder="Nama Anda" required />
+          <input type="email" placeholder="Email Anda" required />
+          <button type="submit">Gabung Sekarang</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-footer">
+    <div class="container">
+      <p>© 2025 NeuroCore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="particles-config.js"></script>
+</body>
+</html>

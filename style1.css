@@ -1,0 +1,87 @@
+/* === BASE === */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0b10;
+  color: #fff;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* === CONTAINER === */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+/* === HEADINGS === */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+/* === PARAGRAPH === */
+p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* === BUTTON === */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background-color: #00ffff;
+  color: #0a0b10;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #00cccc;
+  transform: translateY(-2px);
+}
+
+/* === LIGHT MODE (optional, bisa diaktifkan pakai JS toggle jika perlu) === */
+body.light-mode {
+  background-color: #f5f7fa;
+  color: #111;
+}
+
+body.light-mode .container {
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .btn-primary {
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .btn-primary:hover {
+  background-color: #333;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}

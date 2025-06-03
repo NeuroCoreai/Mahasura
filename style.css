@@ -1,0 +1,299 @@
+/* === BASE === */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0b10;
+  color: #fff;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+  position: relative;
+  text-align: center;
+  padding: 6rem 2rem;
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 17, 26, 0.7);
+  z-index: -1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+}
+
+/* === BUTTON === */
+.btn-primary {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ffff;
+  color: #0a0b10;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+}
+
+.btn-primary:hover {
+  background-color: #00cccc;
+}
+
+/* === FEATURE SECTION === */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* === FEATURE ITEM === */
+.feature-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  
+  /* Animasi muncul */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border 0.3s ease;
+  
+  /* FIX: hilangkan warna biru dan garis bawah link default */
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  /* BONUS: cursor pointer saat hover */
+  cursor: pointer;
+}
+
+/* Animasi muncul aktif */
+.feature-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effect lebih smooth & keren */
+.feature-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), 0 8px 20px rgba(0, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* Klik highlight effect */
+.feature-item:active {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+  transform: translateY(-5px) scale(0.98);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* GIF di fitur */
+.feature-gif {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+/* === GLASS SECTIONS === */
+.glass-section,
+.glass-header,
+.glass-footer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.glass-section.show,
+.glass-header.show,
+.glass-footer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.glass-section p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* === CONTAINER === */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* === LOADER === */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0b10;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.5s ease;
+}
+
+#loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+/* === TOGGLE BUTTON === */
+.toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background: #ffffff22;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  z-index: 10000;
+  transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #ffffff44;
+}
+
+/* === LIGHT MODE === */
+body.light-mode {
+  background-color: #f5f7fa;
+  color: #111;
+}
+
+body.light-mode .glass-section,
+body.light-mode .glass-header,
+body.light-mode .glass-footer,
+body.light-mode .feature-item {
+  background: rgba(0, 0, 0, 0.05);
+  color: #111;
+}
+
+body.light-mode h2 {
+  text-shadow: none;
+}
+
+body.light-mode .btn-primary {
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .btn-primary:hover {
+  background-color: #333;
+}
+
+body.light-mode .toggle-btn {
+  background: #00000022;
+  color: #111;
+}
+
+/* === BETA FORM === */
+#beta-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+#beta-form input,
+#beta-form button {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#beta-form input {
+  flex: 1 1 200px;
+  max-width: 280px;
+}
+
+#beta-form button {
+  background-color: #00ffff;
+  color: #0a0b10;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#beta-form button:hover {
+  background-color: #00cccc;
+  transform: translateY(-2px);
+}
+
+#beta-form-section {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.08);
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background: transparent;
+  pointer-events: none;
+}
